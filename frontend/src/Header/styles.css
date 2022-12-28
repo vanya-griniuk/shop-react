@@ -1,0 +1,27 @@
+.header {
+	align-items: center;
+	background-color: rgb(38, 36, 39);
+	display: flex;
+	height: 90px;
+	justify-content: space-between;
+	padding: 3px 33px;
+}
+
+.cart {
+	background-color: white;
+	border-radius: 4px;
+	color: black;
+	font-size: 30px;
+	padding: 5px;
+}
+
+.cart-items-counter {
+	background-color: red;
+	border-radius: 5px;
+	color: white;
+	padding: 1px 3px;
+	position: absolute;
+	font-size: 16px;
+	right: 26px;
+	top: 11px;
+}
