@@ -1,0 +1,48 @@
+.card {
+  border: 2px solid black;
+  border-radius: 5px;
+ }
+ 
+ .card-img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  max-width: 100%;
+ }
+ 
+ .card-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  gap: 9px;
+  padding: 5px 10px 10px;
+ }
+ 
+ .card-title {
+  font-size: 20px;
+  font-weight: 700;
+ }
+ 
+ .card-price-container {
+  display: flex;
+  justify-content: space-between;
+ }
+ 
+ .card-price {
+  font-size: 20px;
+  font-weight: 700;
+ }
+ 
+ .card-counter-container {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+ }
+ 
+ .card-counter-button {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 3px 4px 0;
+ }
+ 
+ .card-counter-button:first-child { color: green; }
+ .card-counter-button:last-child { color: red; }

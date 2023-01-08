@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css'
+import Card from '../Card';
+import './styles.css';
 
 const Main = () => {
   const [products, setProducts] = useState([]);
-  console.log(products);
+  
   useEffect(() => {
-  //   fetch('http://127.0.0.1:3001').then((response) => response.json()).then((response) => console.log(response));
-  // }, [])
+    fetch('http://127.0.0.1:3001').then((response) => response.json()).then(setProducts);
+  }, [])
 
   return (
-    <main id="container" className="container"></main>
+    <main id="container" className="container">
+      { products.map(({ id, name, description, price, img }) => (
+        <Card 
+          key={id}
+          name={name}
+          description={description}
+          price={price}
+          img={img}
+        />
+      )) }
+    </main>
   );
 };
 
 export default Main;
+
