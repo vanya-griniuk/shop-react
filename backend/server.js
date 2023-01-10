@@ -10,7 +10,8 @@ const server = http.createServer(async (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify(products));
+  // res.end(JSON.stringify(products));
+  setTimeout(() => res.end(JSON.stringify(products)), 5000)
 })
 
 server.listen(port, hostname, () => {

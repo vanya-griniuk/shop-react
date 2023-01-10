@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Dash, Plus } from 'react-bootstrap-icons';
 import './styles.css';
 
-const Card = ({ name, description, price, img }) => {
+const Card = ({ name, description, price, img, setCartItemsCount }) => {
   const [productCount, setProductCount] = useState(0);
 
-  const onMinusButtonClick = () => setProductCount((count) => count - 1)
-  const onPlusButtonClick = () => setProductCount((count) => count + 1)
+  const onMinusButtonClick = () => {
+    if (productCount) {
+      setProductCount((count) => count - 1);
+      setCartItemsCount((count) => count - 1);
+    }
+  };
 
-  
+  const onPlusButtonClick = () => {
+    setProductCount((count) => count + 1);
+    setCartItemsCount((count) => count + 1);
+  };
+
   return (
     <div className="card">
       <img className="card-img" src={`images/${img}`} />
